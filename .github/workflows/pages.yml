@@ -1,5 +1,4 @@
 # Rebuilds the index from Kohei-Wada/houritsu every day and publishes the site.
-# To enable: copy to .github/workflows/pages.yml and set Pages to deploy from GitHub Actions.
 name: Publish site
 on:
   push:
@@ -41,3 +40,13 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  # GitHub disables scheduled workflows after 60 days without repository activity.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/pages.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}

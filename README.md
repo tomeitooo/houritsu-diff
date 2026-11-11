@@ -21,7 +21,7 @@ npm test
 
 ## 毎日の自動更新
 
-`deploy/pages.yml` を `.github/workflows/pages.yml` にコピーして push し、リポジトリの Pages の配信元を GitHub Actions にすると、毎日索引を作り直して公開します。push には `gh auth refresh -s workflow` で得られる権限が必要です。
+`.github/workflows/pages.yml` が毎日、元リポジトリから索引を作り直して GitHub Pages に公開します。Actions タブの Publish site から手動でも実行できます。
 
 ## 出典とライセンス
 
