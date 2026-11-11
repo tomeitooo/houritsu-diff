@@ -1,0 +1,10 @@
+{
+  "name": "houritsu-diff",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "node scripts/build-data.mjs source/houritsu site/data",
+    "dev": "python3 -m http.server 4173 --directory site",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
