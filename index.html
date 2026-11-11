@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>法令Diff</title>
+  <meta name="description" content="日本の法令の改正を、削除と追加の差分で読めるサイト。条文のどこがどう変わったかを一目で確認できます。">
+  <meta property="og:title" content="法令Diff">
+  <meta property="og:description" content="日本の法令の改正を、削除と追加の差分で読めるサイト。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main-content" onclick="event.preventDefault();document.getElementById('main-content').focus()">本文へ移動</a>
+  <header class="nav-wrap"><nav class="nav" id="nav" aria-label="メイン"></nav></header>
+  <main id="main-content" tabindex="-1"></main>
+  <footer class="footer" id="footer"></footer>
+  <script type="module" src="js/app.js"></script>
+  <noscript><p style="padding:96px 16px;text-align:center">このサイトの表示には JavaScript が必要です。</p></noscript>
+</body>
+</html>
